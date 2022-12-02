@@ -1,0 +1,35 @@
+/*pc*/
+@media (min-width: 1024px){
+    .wide{
+        width:990px
+    }
+}
+
+
+/*tablet*/
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wide {
+        width: 744px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .player {
+        position: relative;
+        max-width: 100%;
+        
+    }
+    
+}
+/*mobile*/
+@media (max-width: 740px)  {
+    .wide {
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .player {
+         position: relative;
+        max-width: 100%;
+            
+    }
+}
