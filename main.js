@@ -21,10 +21,10 @@ const app = {
   isPlaying: false, //
   isRandom: false, //
   isRepeat: false, //
-  config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY))||{},
-  setConfig: function(key, value) {
+  config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
+  setConfig: function (key, value) {
     this.config[key] = value;
-    localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config))
+    localStorage.setItem(PLAYER_STORAGE_KEY, JSON.stringify(this.config));
   },
   songs: [
     //list music
@@ -35,19 +35,19 @@ const app = {
       image: "./assets/img/hinh1.jpg",
     },
     {
-      name: "Zed Montage",
+      name: "Ultil You",
       singer: "Poln",
       path: "./assets/music/music2.mp3",
       image: "./assets/img/hinh2.jpg",
     },
     {
-      name: "All for love",
+      name: "All For Love",
       singer: "Join",
       path: "./assets/music/music3.mp3",
       image: "./assets/img/hinh3.jpg",
     },
     {
-      name: "Riven MMA",
+      name: "Riven Noxus ",
       singer: "Bob",
       path: "./assets/music/music4.mp3",
       image: "./assets/img/hinh4.jpg",
@@ -59,34 +59,34 @@ const app = {
       image: "./assets/img/hinh5.jpg",
     },
     {
-      name: "Yasuo MMA",
-      singer: "Alice",
-      path: "./assets/music/music1.mp3",
-      image: "./assets/img/hinh1.jpg",
+      name: "Why Not Me",
+      singer: "Enrique Iglesias",
+      path: "./assets/music/music6.mp3",
+      image: "./assets/img/hinh6.jpg",
     },
     {
-      name: "Zed Montage",
-      singer: "Poln",
-      path: "./assets/music/music2.mp3",
-      image: "./assets/img/hinh2.jpg",
+      name: "Lemon Tree",
+      singer: "Kathus",
+      path: "./assets/music/music7.mp3",
+      image: "./assets/img/hinh7.jpg",
     },
     {
-      name: "All for love",
-      singer: "Join",
-      path: "./assets/music/music3.mp3",
-      image: "./assets/img/hinh3.jpg",
+      name: "Take Me To Tour Heart",
+      singer: "Ricky",
+      path: "./assets/music/music8.mp3",
+      image: "./assets/img/hinh8.jpg",
     },
     {
-      name: "Riven MMA",
-      singer: "Bob",
-      path: "./assets/music/music4.mp3",
-      image: "./assets/img/hinh4.jpg",
+      name: "Dance With Your Ghost",
+      singer: "Kasaki",
+      path: "./assets/music/music9.mp3",
+      image: "./assets/img/hinh9.jpg",
     },
     {
-      name: "Akali Montage",
-      singer: "Tommy",
-      path: "./assets/music/music5.mp3",
-      image: "./assets/img/hinh5.jpg",
+      name: "Kiss The Rain",
+      singer: "Yiruma",
+      path: "./assets/music/music10.mp3",
+      image: "./assets/img/hinh10.jpg",
     },
   ],
   //ham render bai hat trong list songs
@@ -122,8 +122,6 @@ const app = {
         return this.songs[this.currentIndex];
       },
     });
-
-     
   },
   //ham xử lí các event onlick
   handleEvents: function () {
@@ -196,7 +194,7 @@ const app = {
       const seekTime = ((audio.duration / 100) * e.target.value).toFixed(0); //tong so giay cua bai hat chia cho 100% * gia tri value tuong ung tofixed la tron, e.target là lấy toàn bộ thẻ chứa nó (element) (thẻ input)
       audio.currentTime = seekTime;
     };
-    
+
     //khi click nut next bai hat
     nextBtn.onclick = (e) => {
       if (_this.isRandom) {
@@ -225,9 +223,8 @@ const app = {
     // khi click random/ bat tat che do random
     randomBtn.onclick = (e) => {
       _this.isRandom = !_this.isRandom; // neu gia tri random khac nhau thi
-      _this.setConfig('isRandom', _this.isRandom);
+      _this.setConfig("isRandom", _this.isRandom);
       randomBtn.classList.toggle("active", _this.isRandom); //them active khi click ma k co active va xoa active khi click lai icon
-      
     };
     // xu li phat lai mot bai hat
     repeatBtn.onclick = (e) => {
@@ -285,10 +282,9 @@ const app = {
     cdThum.style.backgroundImage = `url('${this.currentSong.image}')`;
     audio.src = this.currentSong.path;
   },
-  loadConfig: function(){
-      this.isRandom = this.config.isRandom
-      this.isRepeat = this.config.isRepeat;
-
+  loadConfig: function () {
+    this.isRandom = this.config.isRandom;
+    this.isRepeat = this.config.isRepeat;
   },
   //event next chuyen sang bai ke tiep
   nextSong: function () {
@@ -323,7 +319,7 @@ const app = {
 
   //goi tat ca function
   start: function () {
-    this.loadConfig();//laod cau hinh tu config vao ung dung
+    this.loadConfig(); //laod cau hinh tu config vao ung dung
 
     //get render htmls, event phia tren
     //dinh nghia cac oject
@@ -338,8 +334,8 @@ const app = {
     // rander danh sach list music sang htmls
     this.render();
     // hien thi trang thai ban dau cua btn rander repeatBtn
-    randomBtn.classList.toggle("active", this.isRandom)
-    repeatBtn.classList.toggle("active", this.isRepeat)
+    randomBtn.classList.toggle("active", this.isRandom);
+    repeatBtn.classList.toggle("active", this.isRepeat);
   },
 };
 
