@@ -29,8 +29,8 @@ const app = {
   songs: [
     //list music
     {
-      name: "Yasuo MMA",
-      singer: "Alice",
+      name: "Love is Gone",
+      singer: "Peter",
       path: "./assets/music/music1.mp3",
       image: "./assets/img/hinh1.jpg",
     },
@@ -41,20 +41,20 @@ const app = {
       image: "./assets/img/hinh2.jpg",
     },
     {
-      name: "All For Love",
+      name: "So far Away",
       singer: "Join",
       path: "./assets/music/music3.mp3",
       image: "./assets/img/hinh3.jpg",
     },
     {
-      name: "Riven Noxus ",
+      name: "You are the reason ",
       singer: "Bob",
       path: "./assets/music/music4.mp3",
       image: "./assets/img/hinh4.jpg",
     },
     {
-      name: "Akali Montage",
-      singer: "Tommy",
+      name: "Ido",
+      singer: "911",
       path: "./assets/music/music5.mp3",
       image: "./assets/img/hinh5.jpg",
     },
@@ -65,8 +65,8 @@ const app = {
       image: "./assets/img/hinh6.jpg",
     },
     {
-      name: "Lemon Tree",
-      singer: "Kathus",
+      name: "Someone Your Love",
+      singer: "Lewis",
       path: "./assets/music/music7.mp3",
       image: "./assets/img/hinh7.jpg",
     },
@@ -78,13 +78,13 @@ const app = {
     },
     {
       name: "Dance With Your Ghost",
-      singer: "Kasaki",
+      singer: "Sloan",
       path: "./assets/music/music9.mp3",
       image: "./assets/img/hinh9.jpg",
     },
     {
-      name: "Kiss The Rain",
-      singer: "Yiruma",
+      name: "I HATE YOU, I LOVE YOU",
+      singer: " Olivia O’brien",
       path: "./assets/music/music10.mp3",
       image: "./assets/img/hinh10.jpg",
     },
